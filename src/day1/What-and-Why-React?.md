@@ -1,0 +1,7 @@
+React is an open-source JavaScript library used to build dynamic and interactive user interfaces, especially for single-page applications. It is based on a component-driven architecture, where the UI is broken into small, reusable pieces, making applications easier to develop and maintain.
+
+Earlier frontend frameworks (like Angular and similar MVVM frameworks) relied heavily on two-way data binding, where the UI and data model automatically updated each other. While this made simple UI interactions easier, it introduced hidden complexity. As applications grew, it became harder to track data changes because updates could happen from multiple directions, leading to debugging difficulty and performance overhead.
+
+React simplified this complexity by introducing one-way data flow and a Virtual DOM rendering approach. Instead of constantly syncing UI and data both ways, React treats state as the single source of truth. When state changes, React re-renders a virtual representation of the UI, compares it with the previous version, and updates only the changed parts in the real DOM.
+
+This makes development easier because developers only need to describe how the UI should look for a given state, rather than managing synchronization manually. It also improves performance and makes large applications easier to maintain and debug.
