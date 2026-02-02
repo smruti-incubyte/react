@@ -45,6 +45,7 @@ const styles: Record<string, React.CSSProperties> = {
         padding: "16px",
     },
     title: {
+        color: "#555",
         margin: "0 0 8px",
         fontSize: "18px",
     },

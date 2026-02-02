@@ -36,7 +36,9 @@ const CustomButton: React.FC<CustomButtonProps> = ({
         <button
             onClick={onClick}
             disabled={disabled}
-            style={baseStyle}
+            style={{
+                ...baseStyle,
+            }}
         >
             {label}
         </button>
