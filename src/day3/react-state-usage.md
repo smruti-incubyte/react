@@ -61,6 +61,24 @@ function incrementTwice() {
 }
 ```
 
+### Complete Example with Unsafe and Safe Patterns
+
+```tsx
+const unsafeIncrement = () => {
+  // ❌ React batches these updates
+  setCount(count + 1);
+  setCount(count + 1);
+  setCount(count + 1);
+};
+
+const safeIncrement = () => {
+  // ✅ Each update receives the latest value
+  setCount(prev => prev + 1);
+  setCount(prev => prev + 1);
+  setCount(prev => prev + 1);
+};
+```
+
 **Rule:** If the new state depends on the old state, always use a function.
 
 ---
@@ -121,7 +139,7 @@ const [data, setData] = useState(expensiveCalculation());
 ### ✅ Lazy initialization
 
 ```tsx
-const [data, setData] = useState(() => expensiveCalculation());
+const [data, setData] = useState(expensiveCalculation);
 ```
 
 ### Example
