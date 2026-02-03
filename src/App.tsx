@@ -11,6 +11,8 @@ import SpreadOperatorComponent from './day1/SpreadOperatorComponent'
 import Card from './day2/Card'
 import CustomButton from './day2/CustomButton'
 import ErrorBoundary from './ErrorBoundary'
+import UsestateComponent from './day3/UsestateComponent'
+import ConditionalRender from './day3/ConditionalRender'
 
 interface TaskData {
   id: number;
@@ -54,7 +56,9 @@ function App() {
       <ArrowFunctionsComponent />
       <DestructuringComponent />
       <SpreadOperatorComponent /> */}
-      <Header title="Day 2 Components" subtitle="Building reusable UI components in React" />
+
+
+      {/* <Header title="Day 2 Components" subtitle="Building reusable UI components in React" />
       <Card
         imageUrl="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop"
         title="Thinking in Components"
@@ -73,7 +77,11 @@ function App() {
           <ListItem key={task.id} data={task} />
         ))}
       </div>
-      <Footer text="Incubyte React" year={2026} />
+      <Footer text="Incubyte React" year={2026} /> */}
+
+      {/* <UsestateComponent /> */}
+
+      <ConditionalRender />
     </div>
   </ErrorBoundary>
 }
