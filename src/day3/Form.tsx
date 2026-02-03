@@ -2,11 +2,19 @@ import { useState } from 'react';
 
 const Form = () => {
   const [name, setName] = useState('');
+  const [error, setError] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!name.trim()) {
+      setError('Field required');
+      return;
+    }
+
     alert(`Hello, ${name}!`);
     setName('');
+    setError('');
   };
 
   return (
@@ -15,10 +23,14 @@ const Form = () => {
       <input
         type="text"
         value={name}
-        onChange={(e) => setName(e.target.value)}
+        onChange={(e) => {
+          setName(e.target.value);
+          setError('');
+        }}
         placeholder="Enter your name"
         style={styles.input}
       />
+      {error && <p style={styles.error}>{error}</p>}
       <button type="submit" style={styles.button}
         onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#0056b3')}
         onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#007bff')}
@@ -60,6 +72,12 @@ const styles: Record<string, React.CSSProperties> = {
     borderRadius: '4px',
     cursor: 'pointer',
     transition: 'background-color 0.2s',
+  },
+  error: {
+    color: '#dc3545',
+    fontSize: '0.875rem',
+    marginTop: '-0.75rem',
+    marginBottom: '1rem',
   },
 };
 
