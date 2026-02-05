@@ -13,6 +13,7 @@ import CustomButton from './day2/CustomButton'
 import ErrorBoundary from './ErrorBoundary'
 import UsestateComponent from './day3/UsestateComponent'
 import ConditionalRender from './day3/ConditionalRender'
+import ThemeSwitcher from './day5/ThemeSwitcher'
 
 interface TaskData {
   id: number;
@@ -81,7 +82,8 @@ function App() {
 
       {/* <UsestateComponent /> */}
 
-      <ConditionalRender />
+      {/* <ConditionalRender /> */}
+      <ThemeSwitcher />
     </div>
   </ErrorBoundary>
 }
