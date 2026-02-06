@@ -14,6 +14,7 @@ import ErrorBoundary from './ErrorBoundary'
 import UsestateComponent from './day3/UsestateComponent'
 import ConditionalRender from './day3/ConditionalRender'
 import ThemeSwitcher from './day5/ThemeSwitcher'
+import GithubSearch from './day6/GithubSearch'
 
 interface TaskData {
   id: number;
@@ -83,7 +84,12 @@ function App() {
       {/* <UsestateComponent /> */}
 
       {/* <ConditionalRender /> */}
-      <ThemeSwitcher />
+
+      {/* <ThemeSwitcher /> */}
+
+      <GithubSearch />
+
+
     </div>
   </ErrorBoundary>
 }
