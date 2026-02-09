@@ -15,6 +15,7 @@ import UsestateComponent from './day3/UsestateComponent'
 import ConditionalRender from './day3/ConditionalRender'
 import ThemeSwitcher from './day5/ThemeSwitcher'
 import GithubSearch from './day6/GithubSearch'
+import Cart from './day7/cart'
 
 interface TaskData {
   id: number;
@@ -87,7 +88,9 @@ function App() {
 
       {/* <ThemeSwitcher /> */}
 
-      <GithubSearch />
+      {/* <GithubSearch /> */}
+
+      <Cart />;
 
 
     </div>
